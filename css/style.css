@@ -19,16 +19,9 @@ body {
 
 /*Banner Styles*/
 
-/*#banner {
-  padding: 200px 0 230px;
-  background: url("../images/layoutphoto2.jpeg") center;
-  background-size: cover;
-  background-attachment: fixed;
-  text-align: center;
-}*/
 #banner {
   padding: 200px 0 230px;
-  background: url("http://codingflag.in/templates/Codes/landing_page_template1/images/banner.jpg") center;
+  background: url("../images/layoutphoto2.jpeg") center;
   background-size: cover;
   background-attachment: fixed;
   text-align: center;
