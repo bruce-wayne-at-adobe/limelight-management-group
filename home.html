@@ -13,6 +13,26 @@
   </head>
   <body>
 
+        <script src="https://connect.soundcloud.com/sdk/sdk-3.1.2.js">
+          
+        </script>
+        <script>
+            SC.initialize({
+              client_id: 'd5aab446820d1a373198c18b0f40f371'
+            });
+
+            var track_url = 'https://soundcloud.com/kingweezy/sets/amazing-clients';
+            SC.oEmbed("https://soundcloud.com/kingweezy/sets/amazing-clients", { auto_play: true }).then(function(oEmbed) {
+              console.log('oEmbed response: ', oEmbed);
+            });
+
+            // stream track id 293
+            SC.stream('/tracks/295179615').then(function(player){
+              player.play();
+            });
+                    </script>
+
+
       <!-- Banner Of Webpage -->
       <div id="banner">
           <h1>LMG|Limelight Management Group's A&ampR Project!</h1>
