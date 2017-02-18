@@ -43,6 +43,14 @@ body {
   image-rendering: 
 }
 
+/*Iframe design*/
+#iframe{
+  border-top: 30px;
+  background-color: lime;
+  opacity: 0.7;
+  border-radius: 45px;
+}
+
 
 /* Info Container Styles */
 
