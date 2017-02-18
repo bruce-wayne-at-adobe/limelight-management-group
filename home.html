@@ -13,10 +13,64 @@
   </head>
   <body>
 
-        <script src="https://connect.soundcloud.com/sdk/sdk-3.1.2.js">
-          
+        <script src="https://connect.soundcloud.com/sdk/sdk-3.1.2.js">  
         </script>
-        <script>
+        
+
+        <script type="text/javascript">
+
+
+          
+          window.jsonpResponse = function (response){ updateOutput(response.id) };
+var CLIENT_ID = 'd5aab446820d1a373198c18b0f40f371', // Please use your own.
+    frame     = document.getElementsByTagName('iframe')[0],
+    input     = document.getElementsByTagName('input'),
+    permalink = input[0],
+    embedCode = input[1];
+
+// frame.style.display = 'none';
+
+// embedCode.style.display = 'none';
+
+function getSoundCloudId(permalink) {
+  var jsonp = document.createElement('script');
+  var script = document.getElementsByTagName('script')[0];
+  jsonp.type = 'text/javascript';
+  jsonp.async = true;
+  jsonp.src = 'http://api.soundcloud.com/resolve.json?client_id='+CLIENT_ID 
+            + '&url='+permalink+'&callback=jsonpResponse';
+  script.parentNode.insertBefore(jsonp, script);
+  return false;
+}
+
+function updateOutput(id) {
+  var embedURL  = 'https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Fplaylists%2F'+30505863;
+  var embedHTML = '<iframe width="100%" height="450" scrolling="no" frameborder="no" src="'+embedURL+'"></iframe>';
+  embedCode.value = embedHTML;
+  embedCode.style.display = 'block';
+  frame.src = embedURL;
+  frame.style.display = 'block';
+}
+
+function getEmbedCode() {
+  var link = permalink.value ? permalink.value : permalink.placeholder;
+  return getSoundCloudId(link, updateOutput);
+}
+        </script>
+
+ <!--        <script>
+
+          
+           SC.initialize({
+            client_id: 'd5aab446820d1a373198c18b0f40f371',
+            // redirect_uri: 'file:///Users/waynebanks/Desktop/dev/Landing%20Page/home.html'
+           });
+
+           SC.get('https://soundcloud.com/sarah-wilcox/let-go-cover-1').then(function(tracks){
+           alert('Latest track: ' + tracks[0].title);
+});
+        </script> -->
+        <!-- <script>
             SC.initialize({
               client_id: 'd5aab446820d1a373198c18b0f40f371'
             });
@@ -27,11 +81,12 @@
             });
 
             // stream track id 293
-            SC.stream('/tracks/295179615').then(function(player){
+            SC.stream('https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/263988977').then(function(player){
               player.play();
             });
-            </script>
-
+            </script> -->
+          <!--   <iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/263988977&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+ -->
       <!-- Banner Of Webpage -->
       <div id="banner">
           <h1>LMG|Limelight Management Group's A&ampR Project!</h1>
@@ -67,6 +122,9 @@
 
               </p>
           </div>
+
+
+
           <div class="col-xs-12 col-sm-12 col-md-pull-6 col-md-6 imgContainer" id="rockstar">
               <img src="images/layoutphoto2.jpeg" />
           </div>
@@ -86,6 +144,9 @@
               <img src="images/LMG|Gold Shades.jpg" />
           </div>
         </div>
+
+        <iframe width="60%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/30505863&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+
       </div>
 
       <!-- Footer Of Webpage -->
