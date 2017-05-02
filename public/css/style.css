@@ -144,6 +144,15 @@ font-family: "Comic Sans MS", "Comic Sans", cursive;
 #limetext{
   color: lime;
 }
+.tweetpic{
+  width: 50px;
+  height: auto;
+}
+#tweets{
+  color: blue;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+
+}
 #flash {
   height: 45px;
   max-width: 185px;
