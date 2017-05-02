@@ -1,7 +1,7 @@
 body {
-  background: white;
+   background: #ffffff;
   font-family: "Open sans",sans-serif;
-   margin-bottom: -300px;
+  margin-bottom: -300px;
 }
 h1 {
   font-size: 50px;
@@ -19,10 +19,18 @@ h2 {
   font-size: 44px !important;
   margin-left: 175px;
 }
+#but1{
+  padding-right: 0px;
+
+}
 nav{
   position: fixed;
 }
-
+#logo-nav{
+  height: 39px;
+  width: 43px;
+  margin-top: -8px;
+}
 /*Banner Styles*/
 
 #banner {
@@ -108,11 +116,34 @@ nav{
   cursor: pointer;
   margin-left: 10px;
 }
+li{
+  list-style: none;
+}
 #footer ul li a:hover {
   color: #eee;
 }
+.wayneworld-container{
+font-family: "Comic Sans MS", "Comic Sans", cursive;
 
+}
 
+#unicorn{
+  max-height: 880px;
+  max-width: 920px, center;
+  opacity: 0.7;
+/*  filter: brightness(5%);
+*/border-radius: 20px;
+  margin-left: 200px;
+}
+#unicorn-text{
+  font-size: 40px;
+  color: red;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+
+}
+#limetext{
+  color: lime;
+}
 #flash {
   height: 45px;
   max-width: 185px;
