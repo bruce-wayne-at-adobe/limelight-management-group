@@ -141,6 +141,11 @@ font-family: "Comic Sans MS", "Comic Sans", cursive;
   font-family: "Comic Sans MS", "Comic Sans", cursive;
 
 }
+#pointing{
+  width: 100px;
+  height: auto;
+  margin-left: 1000px;
+}
 #limetext{
   color: lime;
 }
@@ -151,7 +156,6 @@ font-family: "Comic Sans MS", "Comic Sans", cursive;
 #tweets{
   color: blue;
     font-family: "Comic Sans MS", "Comic Sans", cursive;
-
 }
 #flash {
   height: 45px;
