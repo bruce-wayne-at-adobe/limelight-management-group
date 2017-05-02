@@ -1,6 +1,7 @@
 body {
-  background: rgb(240,240,240);
+  background: white;
   font-family: "Open sans",sans-serif;
+   margin-bottom: -300px;
 }
 h1 {
   font-size: 50px;
@@ -12,16 +13,21 @@ h2 {
   color: rgb(10,10,10);
   font-family: sans-serif;
 }
-body {
-  margin-bottom: -300px;
+#bannertitles {
+  color: black !important;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  font-size: 44px !important;
+  margin-left: 175px;
 }
-
+nav{
+  position: fixed;
+}
 
 /*Banner Styles*/
 
 #banner {
   padding: 200px 0 230px;
-  background: url("http://markreagan.com/wp-content/uploads/2015/07/concert-compressed1-846x562.jpg") center;
+  background: url("http://www.blenditwell.com/wp-content/uploads/2016/05/Entrepreneur.jpg") center;
   background-size: cover;
   background-attachment: fixed;
   text-align: center;
@@ -79,6 +85,8 @@ body {
 /*logo CSS*/
 #logo {
   border-radius: 100px;
+  height:460px;
+  width: 460px;
 }
 
 

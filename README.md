@@ -1,2 +1,2 @@
 # limelight-management-group
-Landing page for The Limelight App.
+## Welcome to Wayne's World; it's party time. Excellent!
