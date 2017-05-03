@@ -17,7 +17,6 @@ const twitter = new Twitter({
 const count = 0;
 const util = require('util');
 // var ckStaticsPath = require('node-ckeditor');
- 
 // //... 
  
 // app.use(express.statics(ckStaticsPath));	
