@@ -13,6 +13,17 @@ h2 {
   color: rgb(10,10,10);
   font-family: sans-serif;
 }
+.projects{
+  width: 60px !important;
+  height: auto
+}
+#portfoliotitle{
+  font-size: 65px;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  color: lime;
+
+}
+
 #bannertitles {
   color: black !important;
   font-family: "Comic Sans MS", "Comic Sans", cursive;
@@ -26,6 +37,13 @@ h2 {
 }
 nav{
   position: fixed;
+}
+#fun-tech{
+  font-size: 80px;
+  text-align: center;
+  color: red;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+
 }
 #logo-nav{
   height: 39px;
@@ -41,6 +59,7 @@ nav{
   background-attachment: fixed;
   text-align: center;
 }
+
 #banner h1 {
     font-size: 55px;
     color: rgb(250,250,250);
@@ -87,6 +106,8 @@ nav{
 }
 .info .row .imgContainer {
   text-align: center;
+  width: 180px !important;
+  height: auto;
 }
 .info .row img {
   width: 230px;
@@ -142,8 +163,21 @@ font-family: "Comic Sans MS", "Comic Sans", cursive;
   font-family: "Comic Sans MS", "Comic Sans", cursive;
 
 }
+.pointing{
+  width: 100px;
+  height: auto;
+  margin-left: 1000px;
+}
 #limetext{
   color: lime;
+}
+.tweetpic{
+  width: 50px;
+  height: auto;
+}
+#tweets{
+  color: blue;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
 }
 #flash {
   height: 45px;
@@ -191,4 +225,22 @@ font-family: "Comic Sans MS", "Comic Sans", cursive;
     50% { opacity: 0.5; }
     100% { opacity: 1.0; }
 }
+/*blog css below*/
+#banner {
+  padding: 200px 0 230px;
+  background: url("http://www.blenditwell.com/wp-content/uploads/2016/05/Entrepreneur.jpg") center;
+  background-size: cover;
+  background-attachment: fixed;
+  text-align: center;
+}
 
+#banner h1 {
+    font-size: 55px;
+    color: rgb(250,250,250);
+}
+#banner p {
+  font-size: 22px;
+  color: rgb(240,240,240);
+  opacity: 0.85;
+}
+/*blog ends here */

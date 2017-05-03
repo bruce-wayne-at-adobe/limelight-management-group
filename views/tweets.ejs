@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+	<title>Tweets</title>
+</head>
+<body>
+	<div class="container">
+<header>
+	<div class="row">
+	<div class="col-md-6">
+	<h1><p id="tweets">TWITTER FEED</p></h1>
+	</div>
+	<div class="col-md-6">
+	<h1>STDG_Developer</h1>
+	</div>
+	</div>
+</header>
+	<a href="/">
+	<img class="animated infinite fadeInRight pointing" src="/images/pointing.png">
+	<p><h3 class="pointing">Go Back</h3></p>
+	</a>
+	</div>
+	<% for(tweet of tweets) { %>
+	</div>
+	<div class="container">
+
+		<%= tweet.text %>
+		<br>
+		<hr>
+	<!-- <img src=" http://pbs.twimg.com/media/C9fcCfWU0AANcLX.jpg"> -->
+	<% if(tweet.extended_entities) { %>
+	<img class="tweetpic" src= "<%=tweet.extended_entities.media[0].media_url%>" />
+	<br>
+
+	<% } %>
+
+	</div>
+	<% } %>
+</body>
+</html>
