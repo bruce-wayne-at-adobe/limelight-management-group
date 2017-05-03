@@ -13,6 +13,17 @@ h2 {
   color: rgb(10,10,10);
   font-family: sans-serif;
 }
+.projects{
+  width: 60px !important;
+  height: auto
+}
+#portfoliotitle{
+  font-size: 65px;
+  font-family: "Montserrat",sans-serif;
+  color: lime;
+
+}
+
 #bannertitles {
   color: black !important;
   font-family: "Comic Sans MS", "Comic Sans", cursive;
@@ -25,6 +36,13 @@ h2 {
 }
 nav{
   position: fixed;
+}
+#fun-tech{
+  font-size: 80px;
+  text-align: center;
+  color: red;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+
 }
 #logo-nav{
   height: 39px;
@@ -86,6 +104,8 @@ nav{
 }
 .info .row .imgContainer {
   text-align: center;
+  width: 180px !important;
+  height: auto;
 }
 .info .row img {
   width: 230px;
@@ -141,7 +161,7 @@ font-family: "Comic Sans MS", "Comic Sans", cursive;
   font-family: "Comic Sans MS", "Comic Sans", cursive;
 
 }
-#pointing{
+.pointing{
   width: 100px;
   height: auto;
   margin-left: 1000px;
