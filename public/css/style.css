@@ -59,6 +59,7 @@ nav{
   background-attachment: fixed;
   text-align: center;
 }
+
 #banner h1 {
     font-size: 55px;
     color: rgb(250,250,250);
@@ -224,4 +225,22 @@ font-family: "Comic Sans MS", "Comic Sans", cursive;
     50% { opacity: 0.5; }
     100% { opacity: 1.0; }
 }
+/*blog css below*/
+#banner {
+  padding: 200px 0 230px;
+  background: url("http://www.blenditwell.com/wp-content/uploads/2016/05/Entrepreneur.jpg") center;
+  background-size: cover;
+  background-attachment: fixed;
+  text-align: center;
+}
 
+#banner h1 {
+    font-size: 55px;
+    color: rgb(250,250,250);
+}
+#banner p {
+  font-size: 22px;
+  color: rgb(240,240,240);
+  opacity: 0.85;
+}
+/*blog ends here */
