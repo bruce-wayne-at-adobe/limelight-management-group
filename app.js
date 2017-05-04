@@ -3,9 +3,10 @@ const express = require('express');
 // const angular = require('angular');
 // angular.module('myApp', [require('angular-route')]);
 // const angularRoute = require('angular-route');
-
+const queries = require('./database/db')
 const app = express();
 const bodyParser = require('body-parser');
+// const urlencodedParser = bodyParser.urlencoded({ extended: false});
 const Twitter = require('twitter')
 const twitter = new Twitter({
 	consumer_key:  '1i4xBaLcDKnTEWhAzfy766PbV',
@@ -67,6 +68,17 @@ app.get('/posts', (req, res) => {
   console.log('check in from posts')
   res.render('posts');
   })
+app.post('/send', (req, res) =>{
+  console.log('req.body', req.body)
+  console.log('i guess, my post is working, huh?')
+  queries.create(req.body)
+  .then(blogs => {
+    res.redirect('posts'); 
+  })
+  .catch( error => {
+    res.send(`error ${error.message} ${error.stack}`)
+  })
+});
 
 
 const port = process.env.PORT || 3001;
