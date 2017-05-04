@@ -65,15 +65,21 @@ app.get('/edit', (req, res) => {
   res.render('edit');
   })
 app.get('/posts', (req, res) => {
+  queries.getAll()
+    .then( blogs => {
+      res.render('posts', {blogs});   
+    })
+    .catch( error => {
+      console.log('this is th error: ', error)
+    })
   console.log('check in from posts')
-  res.render('posts');
-  })
+})
 app.post('/send', (req, res) =>{
-  console.log('req.body', req.body)
+  console.log('req.body heree!!!!!!', req.body)
   console.log('i guess, my post is working, huh?')
   queries.create(req.body)
   .then(blogs => {
-    res.redirect('posts'); 
+    res.redirect('posts')
   })
   .catch( error => {
     res.send(`error ${error.message} ${error.stack}`)
@@ -85,3 +91,5 @@ const port = process.env.PORT || 3001;
 app.listen(port, () => {
   console.log('the server is now running on port: ' + port);
 });
+
+module.exports = app;
