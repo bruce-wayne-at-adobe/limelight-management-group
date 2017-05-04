@@ -45,10 +45,7 @@ app.get('/tweets', (req, res) => {
   });
 })
 
-const port = process.env.PORT || 3001;
-app.listen(port, () => {
-	console.log('the server is now running on port: ' + port);
-});
+
 
 app.get('/', (req, res) => {
 	console.log('check in from login')
@@ -72,3 +69,7 @@ app.get('/posts', (req, res) => {
   })
 
 
+const port = process.env.PORT || 3001;
+app.listen(port, () => {
+  console.log('the server is now running on port: ' + port);
+});
