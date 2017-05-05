@@ -40,7 +40,10 @@
 ### then...
     $ npm install
 ### You can now run your server with:
-    $ nodemon app
+#### If you have nodemon installed you can:
+    $ nodemon app 
+#### If you do not, you can install or just use our start script
+    $ npm start  
 ### If this worked correctly, you should see:
     [nodemon] 1.11.0
     [nodemon] to restart at any time, enter `rs`
