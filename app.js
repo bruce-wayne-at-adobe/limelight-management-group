@@ -91,16 +91,6 @@ app.get('/edit/:id', (req, res) => {
   res.render('edit', { blog })  
   })
 })
-app.post('/posts/:id', (req, res) => {
-  const yadi = req.body
-  console.log(yadi)
-  queries.edited(req.params.id, req.body.body)
-  .then(edits => {
-  res.redirect('posts');  
-  }).catch( error => {
-  console.log('this is the error: ', error)
-  })
-})
 app.post('/delete/:id', (req, res) => {
   const yadi = req.params
   console.log(yadi)
@@ -112,6 +102,16 @@ app.post('/delete/:id', (req, res) => {
   })
 })
 
+app.post('/posts/:id', (req, res) => {
+  const yadi = req.body
+  console.log('this is req.body!!!!:', yadi)
+  queries.edited(req.params.id, req.body.body)
+  .then(edits => {
+  res.redirect('/edit');  
+  }).catch( error => {
+  console.log('this is the error: ', error)
+  })
+})
 const port = process.env.PORT || 3001;
 app.listen(port, () => {
   console.log('the server is now running on port: ' + port);

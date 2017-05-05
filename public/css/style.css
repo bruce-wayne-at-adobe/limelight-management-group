@@ -148,10 +148,9 @@ li{
 font-family: "Comic Sans MS", "Comic Sans", cursive;
 
 }
-
 #unicorn{
-  max-height: 880px;
-  max-width: 920px, center;
+  max-height: auto;
+  max-width: 920px;
   opacity: 0.7;
 /*  filter: brightness(5%);
 */border-radius: 20px;

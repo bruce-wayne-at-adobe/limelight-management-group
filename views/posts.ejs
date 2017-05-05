@@ -30,15 +30,17 @@
         </div>
       </div>
     </nav>
-<!--  -->
+    <div class="container">
+<header><h1>Captain's Logs</h1></header>
+<h2><a href="/blog">Create New Weblog</a></h2>
 
                 <!-- Pager -->
                 <div>
 
     
                 <% for(blog of blogs) { %>
-    <div class="container-fluid">
 
+        <hr>
         <% blog.image %>
         <br>
 
@@ -49,7 +51,7 @@
         <br>
          <br>
         <%= blog.body %>
-        <hr>
+        <br><br>
         <form action="/edit/<%= blog.id %>" method="get">
                         <button class="btn" type="submit">Edit</button>
                     </form>
@@ -57,6 +59,7 @@
                     <form action="/delete/<%= blog.id %>" method="post">
                         <button class="btn" type="submit">DELETE</button>
                     </form>
+                    <hr>
     </div>
     <% } %>
                     

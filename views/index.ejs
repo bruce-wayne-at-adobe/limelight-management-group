@@ -174,19 +174,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div>
         <p id="unicorn-text" class=" container-fluid">I am a unicorn.</p>
         <br><br>
-          <img id="unicorn" class="img-responsive" src="images/unicorn.png">
+          <img id="unicorn" src="images/unicorn.png">
         </div>  
         <br id="music"><br><br>
 
         <div class="row">
           <div class="col-md-4">
-            <img class="img-responsive src="images/eye.png">
+            <img src="images/eye.png">
           </div>
           <div class="col-md-4">
-            <img class="img-responsive src="images/love.jpg">
+            <img src="images/love.jpg">
           </div>
           <div class="col-md-4">
-            <img class="img-responsive src="images/music.jpg">
+            <img src="images/music.jpg">
           </div>
 
         </div>
@@ -197,6 +197,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         </div>
         <br><br>
+        <hr>
         <div class="container">
           <h2><p id="fun-tech">Having Fun with Tech</p></h2>
         </div>
@@ -209,11 +210,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 I remember how much I struggle(d) with APIs and back-end development, but I have gained experience working with:
                 <br><br> 
                 <ul>
-                  <li><a href="/tweets"><img class="projects img-responsive" src="images/twitter.png"></a></li>
+                  <li><a href="/tweets"><img class="projects" src="images/twitter.png"></a></li>
                   <br>
-                  <li><a href="https://limelight-app.herokuapp.com/venues"><img class="projects image-responsive" src="images/GoogleMaps.jpg"></a></li>
+                  <li><a href="https://limelight-app.herokuapp.com/venues"><img class="projects" src="images/GoogleMaps.jpg"></a></li>
                   <br>
-                  <li><a href="https://limelight-app.herokuapp.com/users/2"><img class="projects img-responsive" src="images/soundcloud_logo.png"></a></li>
+                  <li><a href="https://limelight-app.herokuapp.com/users/2"><img class="projects" src="images/soundcloud_logo.png"></a></li>
                 </ul>
 
 <br>
@@ -225,25 +226,30 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
         </div>
 
-        <div class="row">
-          <div class="col-xs-12 col-sm-12 col-md-6">
-              <br><br><br><br>
+<hr>
+        <div class="row container">
+  
               <h2 id="portfoliotitle">Portfolio Projects</h2>
               <div class="col-md-6">
-                <a href="https://physician-patient-app.herokuapp.com/"><img class="img-responsive src="/images/digicare.png"></a>
+                <a href="https://physician-patient-app.herokuapp.com/"><img src="/images/digicare.png"></a>
               </div>
 
               <div class="col-md-6">
-                <a href="https://limelight-app.herokuapp.com/"><img class="img-responsive src="images/logo.jpg"></a>
+                <a href="https://lmg-limelight-management-group.herokuapp.com/#bannertitles"><img src="images/waynes-world.jpg"></a>
+              </div>
+
+              <div class="col-md-6">
+                <a href="https://limelight-app.herokuapp.com/"><img src="images/logo.jpg"></a>
               </div>
           </div>
-      </div>
+          <br>
+          <hr>
+          <br>
           <iframe width="560" height="315" src="https://www.youtube.com/embed/7ASAj1tUkhM" frameborder="0" allowfullscreen></iframe>
+      </div>
+      
 
-        <!--   <div class="row">
-             <iframe class="col-lg-12 col-md-12 col-sm-12" src="https://youtu.be/7ASAj1tUkhM">
-             </iframe>
-          </div> -->
+
 
       <!-- Footer Of Webpage -->
       <div id="footer">
@@ -255,39 +261,5 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <li><a href="https://www.linkedin.com/in/waynebanksii"><i class="fa fa-linkedin"></i></a></li>
         </ul>
       </div>
-
-
-
- <script>
-
-          
-           SC.initialize({
-            client_id: 'd5aab446820d1a373198c18b0f40f371',
-            // redirect_uri: 'file:///Users/waynebanks/Desktop/dev/Landing%20Page/home.html'
-           });
-
-           SC.get('https://soundcloud.com/sarah-wilcox/let-go-cover-1').then(function(tracks){
-           alert('Latest track: ' + tracks[0].title);
-});
-        </script> 
-    
-
   </body>
 </html>
-        <!-- <script>
-            SC.initialize({
-              client_id: 'd5aab446820d1a373198c18b0f40f371'
-            });
-
-            var track_url = 'https://soundcloud.com/kingweezy/sets/amazing-clients';
-            SC.oEmbed("https://soundcloud.com/kingweezy/sets/amazing-clients", { auto_play: true }).then(function(oEmbed) {
-              console.log('oEmbed response: ', oEmbed);
-            });
-
-            // stream track id 293
-            SC.stream('https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/263988977').then(function(player){
-              player.play();
-            });
-            </script> -->
-          <!--   <iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/263988977&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
- -->
