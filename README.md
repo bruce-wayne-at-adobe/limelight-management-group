@@ -22,7 +22,7 @@
 
 ***
 # Immediate Access via Heroku (Demo)
-[https://waynes-world.heroku.com/]
+  [Link to Wayne's World project](https://waynes-world.heroku.com/)
 ***
 # Installation Instructions
 
