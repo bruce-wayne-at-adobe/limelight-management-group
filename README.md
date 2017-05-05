@@ -49,10 +49,25 @@
     [nodemon] to restart at any time, enter `rs`
     [nodemon] watching: *.*
     [nodemon] starting `node app app.js`
-    taskr is listening on port 3001!
+    the server is now running on port: 3001
 ### Navigate to localhost:3001 and take a look around!
     http://localhost:3001/
 ***
+# Specifications
+
+- [x] Site is hosted (I recommend Heroku or gh-pages)
+- [x] Site prominently features link to your GitHub
+- [x] Site uses a CSS framework
+- [x] Site includes blurbs / screenshots / links (both to GitHub and live site) to your most impressive projects (at least 2)
+- [x] Site includes blurbs / links to your open source contributions
+- [x] Site includes social links (like LinkedIn, Twitter, and other places to find you on the internet)
+- [x] Site includes an about page / section with a headshot and bio
+- [x] Your GitHub profile page is cleaned up with clear, descriptive READMEs for the projects you are highlighting
+Optional / Nice to haves
+
+- [x] Site includes Twitter integration (tweets show up on site)
+- [x] Site includes a blog or a link to your blog
+- [x] Uses a custom domain (I recommend using Google Domains) - this will cost you a little $$
 
 
 
