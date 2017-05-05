@@ -21,7 +21,7 @@
 + TwitterAPI
 
 ***
-# Immediate Access via Heroku
+# Immediate Access via Heroku (Demo)
 
 ***
 # Installation Instructions
