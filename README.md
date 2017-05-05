@@ -35,7 +35,7 @@
     waynebanks=#
 ### You, then need to run the following to create your 'waynes_world' database:
     CREATE DATABASE dbname;
-### At this point, you should have already done a pull from the master branch and done and NPM install.
+### At this point, you should have already done a pull from the master branch and done an NPM install with the following:
     $ git pull
 ### then...
     $ npm install
