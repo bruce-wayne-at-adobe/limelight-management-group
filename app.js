@@ -85,7 +85,32 @@ app.post('/send', (req, res) =>{
     res.send(`error ${error.message} ${error.stack}`)
   })
 });
-
+app.get('/edit/:id', (req, res) => {
+  queries.getOnepost(req.params.id)
+  .then( blog => {
+  res.render('edit', { blog })  
+  })
+})
+app.post('/posts/:id', (req, res) => {
+  const yadi = req.body
+  console.log(yadi)
+  queries.edited(req.params.id, req.body.body)
+  .then(edits => {
+  res.redirect('posts');  
+  }).catch( error => {
+  console.log('this is the error: ', error)
+  })
+})
+app.post('/delete/:id', (req, res) => {
+  const yadi = req.params
+  console.log(yadi)
+  queries.delete(req.params.id)
+  .then(edits => {
+  res.redirect('/posts');  
+  }).catch( error => {
+  console.log('this is the error: ', error)
+  })
+})
 
 const port = process.env.PORT || 3001;
 app.listen(port, () => {
