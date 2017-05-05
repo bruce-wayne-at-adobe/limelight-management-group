@@ -12,7 +12,6 @@
     "node": "6.3.0",
     "start": "node app",
     "start-dev": "nodemon app"
-
   },
   "dependencies": {
     "angular": "^1.6.4",
