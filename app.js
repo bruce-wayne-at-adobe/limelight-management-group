@@ -3,9 +3,10 @@ const express = require('express');
 // const angular = require('angular');
 // angular.module('myApp', [require('angular-route')]);
 // const angularRoute = require('angular-route');
-
+const queries = require('./database/db')
 const app = express();
 const bodyParser = require('body-parser');
+// const urlencodedParser = bodyParser.urlencoded({ extended: false});
 const Twitter = require('twitter')
 const twitter = new Twitter({
 	consumer_key:  '1i4xBaLcDKnTEWhAzfy766PbV',
@@ -45,10 +46,7 @@ app.get('/tweets', (req, res) => {
   });
 })
 
-const port = 3001;
-app.listen(port, () => {
-	console.log('the server is now running on port: ' + port);
-});
+
 
 app.get('/', (req, res) => {
 	console.log('check in from login')
@@ -67,8 +65,56 @@ app.get('/edit', (req, res) => {
   res.render('edit');
   })
 app.get('/posts', (req, res) => {
+  queries.getAll()
+    .then( blogs => {
+      res.render('posts', {blogs});   
+    })
+    .catch( error => {
+      console.log('this is th error: ', error)
+    })
   console.log('check in from posts')
-  res.render('posts');
+})
+app.post('/send', (req, res) =>{
+  console.log('req.body heree!!!!!!', req.body)
+  console.log('i guess, my post is working, huh?')
+  queries.create(req.body)
+  .then(blogs => {
+    res.redirect('posts')
   })
+  .catch( error => {
+    res.send(`error ${error.message} ${error.stack}`)
+  })
+});
+app.get('/edit/:id', (req, res) => {
+  queries.getOnepost(req.params.id)
+  .then( blog => {
+  res.render('edit', { blog })  
+  })
+})
+app.post('/delete/:id', (req, res) => {
+  const yadi = req.params
+  console.log(yadi)
+  queries.delete(req.params.id)
+  .then(edits => {
+  res.redirect('/posts');  
+  }).catch( error => {
+  console.log('this is the error: ', error)
+  })
+})
 
+app.post('/posts/:id', (req, res) => {
+  const yadi = req.body
+  console.log('this is req.body!!!!:', yadi)
+  queries.edited(req.params.id, req.body.body)
+  .then(edits => {
+  res.redirect('/edit');  
+  }).catch( error => {
+  console.log('this is the error: ', error)
+  })
+})
+const port = process.env.PORT || 3001;
+app.listen(port, () => {
+  console.log('the server is now running on port: ' + port);
+});
 
+module.exports = app;
