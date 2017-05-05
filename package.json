@@ -9,8 +9,7 @@
     "start-dev": "nodemon app"
   },
   "engines": {
-    "node": "6.3.0"
-
+    "node": "6.3.0",
     "start": "node app",
     "start-dev": "nodemon app"
 
