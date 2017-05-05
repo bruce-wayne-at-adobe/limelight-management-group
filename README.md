@@ -9,7 +9,7 @@
 ***
 # Motivation
 ### This project is a portfolio project which helps to answer the question of what I can do and why you may want to work with me; this is a type of fluid resume which showcases me and my creative sense of humor. 
-## I decided to build my own technical blog, instead of going to a blogger or wordpress. I thought this would be a fun and appropriate for me to design my own as a project.
+## I decided to build my own technical blog, instead of going to a blogger or wordpress. I thought this would be a fun and appropriate way for me to design my own blogging platform as a portfolio project.
 ***
 # Technology Used
 ## Built with:
