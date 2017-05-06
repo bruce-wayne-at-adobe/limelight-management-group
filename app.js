@@ -67,7 +67,8 @@ app.get('/edit', (req, res) => {
 app.get('/posts', (req, res) => {
   queries.getAll()
     .then( blogs => {
-      res.render('posts', {blogs});   
+      console.log("this is the postsssss", req.body)
+      res.render('posts', { blogs: blogs });   
     })
     .catch( error => {
       console.log('this is th error: ', error)
