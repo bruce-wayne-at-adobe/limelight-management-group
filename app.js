@@ -91,6 +91,20 @@ app.get('/edit/:id', (req, res) => {
   res.render('edit', { blog })  
   })
 })
+app.get('/posts/:id', (req, res) => {
+  queries.getOnepost(req.params.id)
+  .then( blog => {
+    console.log('this is my g1p', req.body)
+  res.render('show', { blog })  
+  })
+})
+
+app.get('/', (req, res) => {
+  console.log('check in from login')
+  res.render('index');
+  })
+
+
 app.post('/delete/:id', (req, res) => {
   const yadi = req.params
   console.log(yadi)

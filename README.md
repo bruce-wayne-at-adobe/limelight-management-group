@@ -9,7 +9,7 @@
 ***
 # Motivation
 ### This project is a portfolio project which helps to answer the question of what I can do and why you may want to work with me; this is a type of fluid resume which showcases me and my creative sense of humor. 
-## I decided to build my own technical blog, instead of going to a blogger or wordpress. I thought this would be a fun and appropriate for me to design my own as a project.
+## I decided to build my own technical blog, instead of going to a blogger or wordpress. I thought this would be a fun and appropriate way for me to design my own blogging platform as a portfolio project.
 ***
 # Technology Used
 ## Built with:
@@ -33,9 +33,9 @@
     $ psql
 ### You will then see your username set equal to the poundsign. It should look like the following:
     waynebanks=#
-### You, then need to run the following to create your 'taskr' database:
+### You, then need to run the following to create your 'waynes_world' database:
     CREATE DATABASE dbname;
-### At this point, you should have already done a pull from the master branch and done and NPM install.
+### At this point, you should have already done a pull from the master branch and done an NPM install with the following:
     $ git pull
 ### then...
     $ npm install

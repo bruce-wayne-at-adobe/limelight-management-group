@@ -9,5 +9,7 @@ Port
 Password
 40f76b0835a69b147873e56a7130218cfae331f8e17086cd1f9403add44ae7fc
 URI
-postgres://uoqvgrdqbacjcq:40f76b0835a69b147873e56a7130218cfae331f8e17086cd1f9403add44ae7fc@ec2-54-163-254-48.compute-1.amazonaws.com:5432/d1l217c8ejhav5Heroku CLI
+postgres://uoqvgrdqbacjcq:40f76b0835a69b147873e56a7130218cfae331f8e17086cd1f9403add44ae7fc@ec2-54-163-254-48.compute-1.amazonaws.com:5432/d1l217c8ejhav5
+
+Heroku CLI
 heroku pg:psql postgresql-asymmetrical-21063 --app waynes-world
