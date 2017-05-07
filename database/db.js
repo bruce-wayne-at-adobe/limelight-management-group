@@ -1,7 +1,9 @@
 const pgp = require('pg-promise')();
+
 if(process.env.NODE_ENV === 'production'){
   pgp.pg.defaults.ssl = true;
 };
+
 const connectionString = process.env.DATABASE_URL || 'postgres://localhost:5432/waynes_world';
 const db = pgp(connectionString);
 
