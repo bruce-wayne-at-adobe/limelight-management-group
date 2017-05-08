@@ -1,4 +1,3 @@
-CREATE ROLE waynebanks;
 CREATE DATABASE database_name OWNER waynebanks;
 DROP DATABASE IF EXISTS waynes_world;
 
