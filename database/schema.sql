@@ -1,7 +1,7 @@
 CREATE schema blogs AUTHORIZATION waynebanks;
 
 DROP DATABASE IF EXISTS waynes_world;
-CREATE DATABASE waynes_world AUTHORIZATION waynebanks; 
+CREATE DATABASE waynes_world; 
 
 \c waynes_world
 
