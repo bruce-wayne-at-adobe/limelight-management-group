@@ -1,4 +1,4 @@
-CREATE DATABASE database_name OWNER waynebanks;
+CREATE DATABASE database_name;
 DROP DATABASE IF EXISTS waynes_world;
 
 \c waynes_world
