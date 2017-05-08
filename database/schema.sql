@@ -1,3 +1,5 @@
+CREATE SCHEMA blogs AUTHORIZATION waynebanks;
+
 DROP DATABASE IF EXISTS waynes_world;
 CREATE DATABASE waynes_world; 
 
