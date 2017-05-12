@@ -77,7 +77,7 @@ app.post('/send', (req, res) =>{
   console.log('req.body heree!!!!!!', req.body)
   console.log('i guess, my post is working, huh?')
   queries.create(req.body)
-  .then(blogs => {
+  .then(post => {
     res.redirect('posts')
   })
   .catch( error => {

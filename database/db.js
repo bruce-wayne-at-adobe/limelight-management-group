@@ -1,10 +1,12 @@
 const pgp = require('pg-promise')();
+console.log(process.env.NODE_ENV === 'production')
 
 if(process.env.NODE_ENV === 'production'){
   pgp.pg.defaults.ssl = true;
-};
 
-const connectionString = process.env.HEROKU_POSTGRESQL_JADE_URL || 'postgres://localhost:5432/waynes_world';
+const connectionString = process.env.DATABASE_URL
+} 
+let connectionString = 'postgres://localhost:5432/waynes_world'
 const db = pgp(connectionString);
 
 
@@ -14,9 +16,11 @@ const queries = {
   },
   create(post) {
     console.log('this is the POST', post)
+    console.log(connectionString)
+    console.log(process.env.NODE_ENV)
     return db.any(`
       INSERT INTO blogs(title, body, email, image, location) 
-      VALUES($1, $2, $3, $4, $5)
+      VALUES($1, $2, $3, $4, $5) RETURNING *
     `, [post.title, post.body, post.email, post.image, post.location])
   },
   delete(id) {
