@@ -1,12 +1,15 @@
+var pg = require('pg').native
 const pgp = require('pg-promise')();
-console.log(process.env.NODE_ENV === 'production')
-
 if(process.env.NODE_ENV === 'production'){
   pgp.pg.defaults.ssl = true;
+  pg.connect(process.env.heroku_postgresql_jade_URL, function (err, conn, done) {
+    
+const db = pgp(connectionString)
+})
+}
 
-const connectionString = process.env.DATABASE_URL
-} 
-let connectionString = 'postgres://localhost:5432/waynes_world'
+const connectionString = 'postgres://localhost:5432/waynes_world' || process.env.heroku_postgresql_jade_URL;
+ 
 const db = pgp(connectionString);
 
 
