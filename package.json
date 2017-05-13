@@ -24,6 +24,7 @@
     "express": "*",
     "node-ckeditor": "^4.5.9",
     "pg": "^6.1.5",
+    "pg-native": "^1.10.1",
     "pg-promise": "^5.6.7",
     "twitter": "^1.7.0"
   },
