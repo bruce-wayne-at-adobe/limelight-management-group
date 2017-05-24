@@ -2,10 +2,10 @@ const pgp = require('pg-promise')();
 if(process.env.NODE_ENV === 'production'){
   pgp.pg.defaults.ssl = true;
 
-const connectionString = process.env.heorku_postfresql_jade_URL
-} 
-let connectionString = 'postgres://localhost:5432/waynes_world'
-const db = pgp(connectionString);
+const connectionString = process.env.DATABASE_URL
+
+let dblocal = 'postgres://localhost:5432/waynes_world'
+const db = pgp(connectionString || dblocal);
 
 
 const queries = {
