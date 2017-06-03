@@ -23,6 +23,10 @@ h2 {
   color: lime;
 
 }
+#taskr-pic{
+  width: 213px;
+  height: auto;
+}
 
 #bannertitles {
   color: black !important;
@@ -238,11 +242,14 @@ font-family: "Comic Sans MS", "Comic Sans", cursive;
   background-attachment: fixed;
   text-align: center;
 }
-<<<<<<< HEAD
-=======
+#mentor{
+  margin-top: 40px;
+}
+#mentor-pic{
+  border-radius: 8px;
+  margin-bottom: 40px;
+}
 
-
->>>>>>> 032d70a094f038999205c0ee64f50dec1c3a3522
 #banner h1 {
     font-size: 55px;
     color: rgb(250,250,250);

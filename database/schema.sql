@@ -7,4 +7,4 @@ CREATE TABLE blogs(
 	email TEXT,
 	image BYTEA,
 	location TEXT
-);
+) ;
