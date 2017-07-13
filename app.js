@@ -1,4 +1,3 @@
-
 const express = require('express');
 // const angular = require('angular');
 // angular.module('myApp', [require('angular-route')]);
@@ -6,7 +5,7 @@ const express = require('express');
 const queries = require('./database/db')
 const app = express();
 const bodyParser = require('body-parser');
-// const urlencodedParser = bodyParser.urlencoded({ extended: false});
+const urlencodedParser = bodyParser.urlencoded({ extended: false});
 const Twitter = require('twitter')
 const twitter = new Twitter({
 	consumer_key:  '1i4xBaLcDKnTEWhAzfy766PbV',
@@ -79,7 +78,7 @@ app.post('/send', (req, res) =>{
   console.log('req.body heree!!!!!!', req.body)
   console.log('i guess, my post is working, huh?')
   queries.create(req.body)
-  .then(blogs => {
+  .then(post => {
     res.redirect('posts')
   })
   .catch( error => {
@@ -118,11 +117,10 @@ app.post('/delete/:id', (req, res) => {
 })
 
 app.post('/posts/:id', (req, res) => {
-  const yadi = req.body
-  console.log('this is req.body!!!!:', yadi)
-  queries.edited(req.params.id, req.body.body)
-  .then(edits => {
-  res.redirect('/edit');  
+  console.log('this is req.body!!!!:', req.params)
+  queries.edited(req.body.body, req.body.title, req.params.id, req.body.location, req.body.email)
+  .then(blogs => {
+  res.render('posts', {blogs});  
   }).catch( error => {
   console.log('this is the error: ', error)
   })
